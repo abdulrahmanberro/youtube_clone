@@ -28,6 +28,7 @@ a {
 .category-btn:hover {
   background-color: #fc1503 !important;
   color: white !important;
+  transition: 0.2s ease all;
 }
 
 .category-btn:hover span {
