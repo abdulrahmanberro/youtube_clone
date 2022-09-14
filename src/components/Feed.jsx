@@ -1,9 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Box, Stack, Typography } from "@mui/material";
-import { Sidebar } from "./index";
+import { alertTitleClasses, Box, Stack, Typography } from "@mui/material";
+import { Sidebar, Videos } from "./index";
+
+import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const Feed = () => {
+  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideos(data.items)
+    );
+  }, [selectedCategory]);
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -13,14 +22,28 @@ const Feed = () => {
           paddingX: { sx: 0, md: 2 },
         }}
       >
-        <Sidebar />
+        <Sidebar
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <Typography
           calssName="copyright"
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          &copy; Copyright 2022 YT Clone Made By Abdulrahman
+          Copyright &copy; 2022 YT Clone Made By Abdulrahman
         </Typography>
+      </Box>
+      <Box p={2} sx={{ overflow: "auto", height: "90vh", flex: 2 }}>
+        <Typography variant="body2" sx={{ color: "white", mb: 2 }}>
+          <span
+            style={{ color: "#F31503", fontSize: "2rem", fontWeight: "bold" }}
+          >
+            <span style={{ color: "white" }}>{selectedCategory} </span>
+            Videos
+          </span>
+        </Typography>
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );
