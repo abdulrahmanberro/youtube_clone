@@ -7,6 +7,7 @@ import CheckCircle from "@mui/icons-material/CheckCircle";
 
 import { Videos } from "./index";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import "../css/videoDetial.css";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
