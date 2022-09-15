@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { alertTitleClasses, Box, Stack, Typography } from "@mui/material";
-import { Sidebar, Videos } from "./index";
+import { Sidebar, Videos, Loading } from "./index";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 

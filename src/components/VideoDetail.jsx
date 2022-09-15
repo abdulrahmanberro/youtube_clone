@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
 import CheckCircle from "@mui/icons-material/CheckCircle";
 
-import { Videos } from "./index";
+import { Videos, Loading } from "./index";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import "../css/videoDetial.css";
 
@@ -23,7 +23,7 @@ const VideoDetail = () => {
     );
   }, [id]);
 
-  if (!videoDetail?.snippet) return "Loding...";
+  if (!videoDetail?.snippet) return <Loading />;
 
   const {
     snippet: { title, channelId, channelTitle },
