@@ -15,6 +15,7 @@ const Navbar = () => {
         background: "#000",
         top: 0,
         justifyContent: "space-between",
+        zIndex: "99",
       }}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>

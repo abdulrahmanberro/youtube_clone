@@ -1,0 +1,23 @@
+@media screen and (min-width: 375px) {
+  .vidCard {
+    width: 345px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .vidCard {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .vidCard {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .vidCard {
+    width: 310px;
+  }
+}
