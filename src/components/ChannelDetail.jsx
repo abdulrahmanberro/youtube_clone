@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Videos, ChannelCard } from "./index";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import "../css/channelDetail.css";
 
 const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
@@ -40,7 +41,7 @@ const ChannelDetail = () => {
           />
           <ChannelCard marginTop="-93px" channelDetail={channelDetail} />
         </Box>
-        <Box display="flex" p="2">
+        <Box display="flex" p="2" className="channelVids">
           <Box
             sx={{
               mr: { sm: "100px" },

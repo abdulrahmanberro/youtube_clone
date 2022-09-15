@@ -36,7 +36,6 @@ const VideoDetail = () => {
         <Box flex={1}>
           <Box
             sx={{
-              width: "100%",
               position: "sticky",
               top: "30px",
             }}
@@ -47,11 +46,12 @@ const VideoDetail = () => {
             />
             <Typography
               sx={{
-                fontSize: { xs: "1rem", md: "1.5rem" },
+                fontSize: { xs: "1rem" },
               }}
               color="#fff"
               p={2}
               variant="h5"
+              className="vidTitle"
             >
               {title}
             </Typography>
@@ -97,11 +97,11 @@ const VideoDetail = () => {
           </Box>
         </Box>
         <Box
-          px={2}
+          px={1}
           py={{ md: 1, xs: 5 }}
           justifyContent="center"
           alignItems="center"
-          className="vidCard"
+          className="videoDetailCard"
         >
           <Videos videos={videos} direction="column" />
         </Box>

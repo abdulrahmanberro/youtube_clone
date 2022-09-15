@@ -1,24 +1,39 @@
 @media screen and (min-width: 320px) {
-  .vidCard {
-    width: 290px;
+  .videoDetailCard {
+    width: 200px;
   }
 }
 
 @media screen and (min-width: 375px) {
-  .vidCard {
-    width: 340px;
+  .videoDetailCard {
+    width: 220px;
   }
 }
 
 @media screen and (min-width: 425px) {
-  .vidCard {
-    width: 390px;
+  .videoDetailCard {
+    width: 350px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .vidCard {
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .videoDetailCard {
+    position: relative;
+    width: 460px;
+    left: 27%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  .videoDetailCard {
+    position: relative;
+    width: 460px;
+    left: 22%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .videoDetailCard {
     width: 390px;
-    left: 50%;
   }
 }

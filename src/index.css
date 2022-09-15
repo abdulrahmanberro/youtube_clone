@@ -87,9 +87,3 @@ a {
     width: 120px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .vidCard {
-    width: 360px;
-  }
-}
