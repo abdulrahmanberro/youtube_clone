@@ -30,6 +30,10 @@ const VideoDetail = () => {
     statistics: { viewCount, likeCount },
   } = videoDetail;
 
+  const moveToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Box minHeight="100%">
       <Stack direction={{ xs: "column", md: "row" }}>
@@ -103,7 +107,7 @@ const VideoDetail = () => {
           alignItems="center"
           className="videoDetailCard"
         >
-          <Videos videos={videos} direction="column" />
+          <Videos onClick={moveToTop} videos={videos} direction="column" />
         </Box>
       </Stack>
     </Box>

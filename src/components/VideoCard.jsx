@@ -12,6 +12,10 @@ import {
   demoChannelTitle,
 } from "../utils/constants";
 
+const moveToTop = () => {
+  window.scrollTo(0, 0);
+};
+
 const VideoCard = ({
   video: {
     id: { videoId },
@@ -26,7 +30,10 @@ const VideoCard = ({
     }}
     className="vidCard"
   >
-    <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
+    <Link
+      onClick={moveToTop}
+      to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}
+    >
       <CardMedia
         image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
         alt={snippet?.title}
